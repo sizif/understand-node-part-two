@@ -5,6 +5,14 @@ note: in /l27, greet.js
 When our code is run through node, it's wrapped in a 
 function expression, "almost an iife".
 
+The require function returns module.exports. It's returning
+the property on the module object.
+
+However, exports does not work for all the module patterns
+shown previously.
+
+
+
 
 
 
