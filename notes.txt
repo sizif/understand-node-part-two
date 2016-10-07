@@ -1,0 +1,5 @@
+Lecture 27: Exports vs. module exports
+
+note: in /l27, greet.js
+
+
