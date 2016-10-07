@@ -11,6 +11,30 @@ the property on the module object.
 However, exports does not work for all the module patterns
 shown previously.
 
+You'd think they are the same object, but they don't return the same:
+console.log(exports);           // returns [Function]
+console.log(module.exports);    // returns {}
+
+There's a quirk in JS when setting a var equal to a value.
+
+module.exports still points to an Object,
+but 
+exports = to a value creates a new Object in memory.
+
+Originally, module.exports and exports were pointing to the same object in
+memory, but once "exports =" was used, a new object was made and the
+connection was broken.
+
+So, when it comes to "exports" I can't override it, I can't use "equals".
+However, I can change it, that is to say, I can add a new property, or a 
+new method. I can cahnge it, I can mutate it.
+
+MUTATE:
+To change something.
+
+For example, adding a method or property to an object means you've mutated
+the object.
+
 
 
 

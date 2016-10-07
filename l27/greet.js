@@ -1,4 +1,6 @@
-var greet = function() {
+exports = function() {
     console.log('Hello!');
 }
-module.exports = greet;
+console.log(exports);           // returns [Function]
+console.log(module.exports);    // returns {}
+
