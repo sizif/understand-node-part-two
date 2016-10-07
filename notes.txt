@@ -54,5 +54,16 @@ think about at one time).
 
 Just use module.exports!
 
+l28: REQUIRING NATIVE (CORE) MODULES
+
+What do they do? See here: https://nodejs.org/api/
+
+READ IT!
+
+I the meantime, in app-l28-01.js, is an example of using the util native
+module in my code.
+
+
+
 
 
