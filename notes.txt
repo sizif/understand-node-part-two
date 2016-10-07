@@ -70,6 +70,44 @@ I the meantime, in app-l28-01.js, is an example of using the util native
 module in my code.
 
 
+l29 - MODULES AND ES6
+---------------------
+
+The new syntax for modules in es6 is very powerful.
+
+greet-l29-01.js and app-l29-01.js
+
+DOES NOT WORK IN node 4.5.
+
+l30 - WEB SERVER CHECKLIST
+--------------------------
+Better ways to organize code into reusable pieces
+Ways to deal with files
+Ways to deal with databases
+The ability to communicate over the internet
+the ability to accept requests and send responses (in the standard format)
+A way to deal with work that takes a long time
+
+l31 - EVENTS AND THE EVENT EMITTER
+----------------------------------
+
+System Events (C++ Core: libuv) - VS - Custom Events (JS core: event emitter)
+
+As we're about to see, the JavaScript side is faking it, it's not
+real events. Because JS does not have an eventing concept, there is
+no Event object in JS.
+
+But we can fake it, we can create our own event library, with the
+technique that the node Event Emitter uses.
+
+We'll build our own Event Emitter to understand how node uses its
+Event Emmiter and all the native code that comes on top of it.
+
+
+
+
+
+
 
 
 
