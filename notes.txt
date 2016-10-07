@@ -35,7 +35,10 @@ To change something.
 For example, adding a method or property to an object means you've mutated
 the object.
 
+So now I'll mutate the object in greet2.js.
 
+Run node app2.js to see the difference between greet.js module and
+greet2.js module printed in node console.
 
 
 
