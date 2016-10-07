@@ -103,6 +103,10 @@ technique that the node Event Emitter uses.
 We'll build our own Event Emitter to understand how node uses its
 Event Emmiter and all the native code that comes on top of it.
 
+l32 - OBJECT PROPERTIES AND METHODS
+-----------------------------------
+
+
 
 
 
