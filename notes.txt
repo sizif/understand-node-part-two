@@ -60,6 +60,13 @@ What do they do? See here: https://nodejs.org/api/
 
 READ IT!
 
+To require util, I can just:
+
+var util = require('util');
+
+And now I have an object that has all the niceities 
+of that utility feature.
+
 I the meantime, in app-l28-01.js, is an example of using the util native
 module in my code.
 
