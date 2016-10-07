@@ -2,4 +2,9 @@ Lecture 27: Exports vs. module exports
 
 note: in /l27, greet.js
 
+When our code is run through node, it's wrapped in a 
+function expression, "almost an iife".
+
+
+
 
