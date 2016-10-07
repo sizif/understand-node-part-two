@@ -40,6 +40,19 @@ So now I'll mutate the object in greet2.js.
 Run node app2.js to see the difference between greet.js module and
 greet2.js module printed in node console.
 
+Why did it work in app2, and not in app1?
+
+IMPORTANT ANSWER: Because I simply mutated, I added, I changed the object,
+I did not change the reference.
+I can now call greet2.greet(), because I added the property.
+
+I can use only "exports", but only if I mutate the object, I can't replace
+the object with something else.
+
+I like to lower my cognitive load while coding (that is, how many things I
+think about at one time).
+
+Just use module.exports!
 
 
 
