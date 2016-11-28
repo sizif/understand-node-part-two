@@ -106,8 +106,147 @@ Event Emmiter and all the native code that comes on top of it.
 l32 - OBJECT PROPERTIES AND METHODS
 -----------------------------------
 
+l33 - THE NODE EVENT EMITTER PART 1
+-----------------------------------
 
+I'll create an emmiter module, that will allow us to say that an event
+happened, and to react to it.
 
+function Emitter() {
+    this.events = {};
+}
+
+/*
+1.
+"Emitter.prototype." = prototype of any object created with 
+the above constructor function
+*/ 
+Emitter.prototype.
+    
+}
+
+/*
+2.
+The first method of the prototype will be called 'on', 
+and it will be a function
+*/
+Emitter.prototype.on = function() {
+
+}
+
+/*
+3.
+What will this function take? It will take 2 params, the type of event
+that I want, and the 'listener'
+*/
+Emitter.prototype.on = function(type, listener) {
+
+}
+
+/*
+4.
+What's an event listener?
+THE CODE THAT RESPONDS TO AN EVENT. When the event happens, the code is run.
+In JS's case, the listener will be a function.
+You can have many listeners listening for the same event, all over your code.
+The listeners won't be invoked simultaneously, but 1 at a time in JS case.
+
+My method 'on' is essentially, to add listeners. It's very common to add 'on'
+when setting up events to listen to in programming, cuz it reads nicely.
+*/
+Emitter.prototype.on = function(type, listener) {
+
+}
+
+/*
+5.
+the 'type' will be the type of event. Again, these aren't real events,
+this is just a trick. So my .events property is an object, and remember,
+I can access properties on that object with a string.
+*/
+Emitter.prototype.on = function(type, listener) {
+    this.events[type]
+}
+
+/*
+6.
+Let's check if the property exists, if it doesn't set it to empty array.
+*/
+Emitter.prototype.on = function(type, listener) {
+    this.events[type] - this.events[type] || [];
+}
+
+THE FULL CODE SO FAR:
+function Emitter() {
+    this.events = {
+        prop: []; // this just describes what happens in **
+    };
+}
+
+Emitter.prototype.on = function(type, listener) {
+    this.event[type] = this.events[type] || []; // **: if it doesn't exist, mk []
+}
+
+/*
+7.
+So I have now this  array, (that is a property):
+this.events = {};
+
+, and the property name will be whatever I put into the 'type' slot:
+...function(TYPE... {
+    this.events[TYPE] = this.events[TYPE]...
+*/
+
+/*
+8.
+And then I'm going to push my listener function into the array:
+*/
+function Emitter() {
+    this.events = {};
+}
+
+Emitter.prototype.on = function(type, listener) {
+    this.events[type] = this.events[type] || [];
+    this.events[type].push(listener);
+}
+
+/*
+So, this is a property on an object:
+this.events[type]
+
+It is an array. 
+
+And I'm adding a function on it:
+... .push(listener);
+
+So if I was to look at the object afterwards, it would essentially be an
+object {}, then a property name, whatever is in 'type', so maybe it's 
+'onFileSave', or gotSomethingFromInternet, whatever it is, and then it will
+be an array:
+
+{
+    onFileSave...
+}
+
+{
+    gotSomethingFromInternet: []
+}
+
+AND IN THAT ARRAY, will be functions:
+{
+    gotSomethingFromInternet: [function() {}, function() {}, ...]
+}
+
+Every time I push a new function, I'll get a new item in the array.
+
+THAT'S ALL on IS ACTUALLY DOING:
+1. create a new property on the object      # this.events[type] #
+2. make sure it is an array                 # ... || [] #
+3. start adding functions into that array   # .push(listener);
+
+l33 / 5:05 
+
+*/
 
 
 
